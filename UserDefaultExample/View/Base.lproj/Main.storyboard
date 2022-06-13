@@ -29,6 +29,9 @@
                                             <subviews>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3D8-us-r9X">
                                                     <rect key="frame" x="345" y="8.5" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="toggle:" destination="Sdv-6B-jJP" eventType="valueChanged" id="YIW-0x-Iz5"/>
+                                                    </connections>
                                                 </switch>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="airplane.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vr7-3Z-zfJ">
                                                     <rect key="frame" x="10" y="5.5" width="37.5" height="37"/>
@@ -38,7 +41,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비행기 모드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6u-Gs-h6D">
-                                                    <rect key="frame" x="62.5" y="9" width="114" height="30"/>
+                                                    <rect key="frame" x="62.5" y="9" width="272.5" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -50,10 +53,16 @@
                                                 <constraint firstItem="E6u-Gs-h6D" firstAttribute="leading" secondItem="vr7-3Z-zfJ" secondAttribute="trailing" constant="15" id="CQ9-9d-A34"/>
                                                 <constraint firstItem="3D8-us-r9X" firstAttribute="centerY" secondItem="uvG-Db-aP9" secondAttribute="centerY" id="GBH-M9-sLe"/>
                                                 <constraint firstAttribute="trailing" secondItem="3D8-us-r9X" secondAttribute="trailing" constant="20" id="Jat-vW-99w"/>
+                                                <constraint firstItem="3D8-us-r9X" firstAttribute="leading" secondItem="E6u-Gs-h6D" secondAttribute="trailing" constant="10" id="bVw-4g-ymP"/>
                                                 <constraint firstItem="vr7-3Z-zfJ" firstAttribute="top" secondItem="uvG-Db-aP9" secondAttribute="top" constant="5" id="k6k-kp-Zqw"/>
                                                 <constraint firstAttribute="bottom" secondItem="vr7-3Z-zfJ" secondAttribute="bottom" constant="5" id="n2O-Gl-Z1a"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="content" destination="E6u-Gs-h6D" id="sDP-sP-wuT"/>
+                                            <outlet property="icon" destination="vr7-3Z-zfJ" id="Gbn-Np-Ijz"/>
+                                            <outlet property="toggleSwitch" destination="3D8-us-r9X" id="PCD-eE-6CQ"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="IndicatorCell" id="4f3-0c-j3T" customClass="IndicatorCell" customModule="UserDefaultExample" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92.5" width="414" height="48"/>
@@ -62,8 +71,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="385.5" height="48"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="airplane.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Z77-ln-GN6">
-                                                    <rect key="frame" x="10" y="5.5" width="37.5" height="37"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gearshape" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Z77-ln-GN6">
+                                                    <rect key="frame" x="10" y="5" width="37.5" height="38"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="37.5" id="yKg-WD-Q4y"/>
                                                         <constraint firstAttribute="width" constant="37.5" id="zkS-QF-Xts"/>
@@ -108,6 +117,7 @@
     </scenes>
     <resources>
         <image name="airplane.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
