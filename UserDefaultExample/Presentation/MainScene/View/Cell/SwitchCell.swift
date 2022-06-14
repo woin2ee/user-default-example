@@ -22,8 +22,7 @@ class SwitchCell: UITableViewCell {
     }
     
     @IBAction func toggleSwitchClicked(_ sender: UISwitch) {
-        print(toggleSwitch.isOn)
-        print(content.text!)
-        UserDefaults.standard.set(toggleSwitch.isOn, forKey: content.text!)
+        guard let key = SwitchCellName(rawValue: content.text!) else { return }
+        SwitchCellUserManager.setUserDefault(value: toggleSwitch.isOn, forkey: key)
     }
 }

@@ -29,19 +29,20 @@ class DefaultMainViewModel: MainViewModel {
     var settingData: [SwitchCellData]
     
     init() {
-        self.settingData = [.init("airplane.circle.fill", .airplaneMode),
-                            .init("wifi.circle.fill", .wifi),
-                            .init("doc.circle.fill", .cellularData),
-                            .init("link.circle.fill", .bluetooth)]
+        self.settingData = [
+            .init("airplane.circle.fill", .airplaneMode),
+            .init("wifi.circle.fill", .wifi),
+            .init("doc.circle.fill", .cellularData),
+            .init("link.circle.fill", .bluetooth)
+        ]
     }
 }
 
 struct SwitchCellData {
-    
     let iconName: String
     let content: SwitchCellName
     var state: Bool {
-        UserDefaults.standard.bool(forKey: content.rawValue)
+        SwitchCellUserManager.getUserDefault(forkey: content)
     }
     
     init(_ iconName: String, _ content: SwitchCellName) {

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		E803491828587A4D00480569 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E803491728587A4D00480569 /* Observable.swift */; };
 		E857FBDF2858794D006C7687 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E857FBDE2858794D006C7687 /* MainViewModel.swift */; };
-		E8682FE228573C85000EBE4C /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8682FE128573C85000EBE4C /* UserManager.swift */; };
+		E8682FE228573C85000EBE4C /* SwitchCellUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8682FE128573C85000EBE4C /* SwitchCellUserManager.swift */; };
 		E89126E328573056008B29A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89126E228573056008B29A9 /* AppDelegate.swift */; };
 		E89126E528573056008B29A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89126E428573056008B29A9 /* SceneDelegate.swift */; };
 		E89126E728573056008B29A9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89126E628573056008B29A9 /* MainViewController.swift */; };
@@ -22,7 +22,7 @@
 /* Begin PBXFileReference section */
 		E803491728587A4D00480569 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		E857FBDE2858794D006C7687 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		E8682FE128573C85000EBE4C /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		E8682FE128573C85000EBE4C /* SwitchCellUserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCellUserManager.swift; sourceTree = "<group>"; };
 		E89126DF28573056008B29A9 /* UserDefaultExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserDefaultExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E89126E228573056008B29A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E89126E428573056008B29A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 		E8682FE028573BAF000EBE4C /* Persistent */ = {
 			isa = PBXGroup;
 			children = (
-				E8682FE128573C85000EBE4C /* UserManager.swift */,
+				E8682FE128573C85000EBE4C /* SwitchCellUserManager.swift */,
 			);
 			path = Persistent;
 			sourceTree = "<group>";
@@ -232,7 +232,7 @@
 			files = (
 				E803491828587A4D00480569 /* Observable.swift in Sources */,
 				E857FBDF2858794D006C7687 /* MainViewModel.swift in Sources */,
-				E8682FE228573C85000EBE4C /* UserManager.swift in Sources */,
+				E8682FE228573C85000EBE4C /* SwitchCellUserManager.swift in Sources */,
 				E89126E728573056008B29A9 /* MainViewController.swift in Sources */,
 				E89126FE28573453008B29A9 /* SwitchCell.swift in Sources */,
 				E89126E328573056008B29A9 /* AppDelegate.swift in Sources */,
