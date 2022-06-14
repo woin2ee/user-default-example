@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UserDefaultExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="UserDefaultExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,7 +30,7 @@
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3D8-us-r9X">
                                                     <rect key="frame" x="345" y="8.5" width="51" height="31"/>
                                                     <connections>
-                                                        <action selector="toggle:" destination="Sdv-6B-jJP" eventType="valueChanged" id="YIW-0x-Iz5"/>
+                                                        <action selector="toggleSwitchClicked:" destination="Sdv-6B-jJP" eventType="valueChanged" id="w9i-nb-t02"/>
                                                     </connections>
                                                 </switch>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="airplane.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vr7-3Z-zfJ">
@@ -64,36 +64,6 @@
                                             <outlet property="toggleSwitch" destination="3D8-us-r9X" id="PCD-eE-6CQ"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="IndicatorCell" id="4f3-0c-j3T" customClass="IndicatorCell" customModule="UserDefaultExample" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92.5" width="414" height="48"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4f3-0c-j3T" id="3ZD-mm-OEa">
-                                            <rect key="frame" x="0.0" y="0.0" width="385.5" height="48"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gearshape" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Z77-ln-GN6">
-                                                    <rect key="frame" x="10" y="5" width="37.5" height="38"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="37.5" id="yKg-WD-Q4y"/>
-                                                        <constraint firstAttribute="width" constant="37.5" id="zkS-QF-Xts"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비행기 모드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHx-XF-jDh">
-                                                    <rect key="frame" x="62.5" y="9" width="114" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="KHx-XF-jDh" firstAttribute="centerY" secondItem="3ZD-mm-OEa" secondAttribute="centerY" id="Bkz-Qn-Jch"/>
-                                                <constraint firstItem="Z77-ln-GN6" firstAttribute="top" secondItem="3ZD-mm-OEa" secondAttribute="top" constant="5" id="Th8-Pe-o3f"/>
-                                                <constraint firstItem="Z77-ln-GN6" firstAttribute="leading" secondItem="3ZD-mm-OEa" secondAttribute="leading" constant="10" id="W2h-tD-hU6"/>
-                                                <constraint firstItem="KHx-XF-jDh" firstAttribute="leading" secondItem="Z77-ln-GN6" secondAttribute="trailing" constant="15" id="dkA-Xy-Fny"/>
-                                                <constraint firstAttribute="bottom" secondItem="Z77-ln-GN6" secondAttribute="bottom" constant="5" id="hiY-jr-AcW"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
@@ -117,7 +87,6 @@
     </scenes>
     <resources>
         <image name="airplane.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="gearshape" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

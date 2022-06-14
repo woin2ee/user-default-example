@@ -21,15 +21,9 @@ class SwitchCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    @IBAction func toggle(_ sender: UISwitch) {
-        
-    }
-}
-
-extension SwitchCell {
-    struct Data {
-        var icon: UIImage?
-        var content: String
-        var state: Bool
+    @IBAction func toggleSwitchClicked(_ sender: UISwitch) {
+        print(toggleSwitch.isOn)
+        print(content.text!)
+        UserDefaults.standard.set(toggleSwitch.isOn, forKey: content.text!)
     }
 }
