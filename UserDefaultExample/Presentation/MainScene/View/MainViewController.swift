@@ -29,7 +29,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = settingTable.dequeueReusableCell(withIdentifier: String(describing: SwitchCell.self)) as! SwitchCell
         
         cell.icon.image = UIImage(systemName: viewModel.settingData[indexPath.row].iconName)
-        cell.content.text = viewModel.settingData[indexPath.row].content
+        cell.content.text = viewModel.settingData[indexPath.row].content.rawValue
         cell.toggleSwitch.isOn = viewModel.settingData[indexPath.row].state
         
         return cell
