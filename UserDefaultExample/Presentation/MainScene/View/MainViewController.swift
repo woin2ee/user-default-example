@@ -9,14 +9,17 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    @IBOutlet private weak var settingTable: UITableView!
+    @IBOutlet private weak var settingTable: UITableView! {
+        didSet {
+            settingTable.dataSource = self
+            settingTable.delegate = self
+        }
+    }
     
     private let viewModel: MainViewModel = DefaultMainViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        settingTable.dataSource = self
-        settingTable.delegate = self
     }
 }
 
