@@ -15,7 +15,7 @@ enum SwitchCellName: String {
 }
 
 protocol MainViewModelInput {
-    
+    func didUpdateUserDefaults(value: Bool, forKey key: SwitchCellName)
 }
 
 protocol MainViewModelOutput {
@@ -35,6 +35,10 @@ class DefaultMainViewModel: MainViewModel {
             .init("doc.circle.fill", .cellularData),
             .init("link.circle.fill", .bluetooth)
         ]
+    }
+    
+    func didUpdateUserDefaults(value: Bool, forKey key: SwitchCellName) {
+        SwitchCellUserManager.setUserDefault(value: value, forkey: key)
     }
 }
 

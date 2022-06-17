@@ -16,10 +16,11 @@ class MainViewController: UIViewController {
         }
     }
     
-    private let viewModel: MainViewModel = DefaultMainViewModel()
+    private var viewModel: MainViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = DefaultMainViewModel()
     }
 }
 
@@ -30,11 +31,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = settingTable.dequeueReusableCell(withIdentifier: String(describing: SwitchCell.self)) as! SwitchCell
-        
-        cell.icon.image = UIImage(systemName: viewModel.settingData[indexPath.row].iconName)
-        cell.content.text = viewModel.settingData[indexPath.row].content.rawValue
-        cell.toggleSwitch.isOn = viewModel.settingData[indexPath.row].state
-        
+        cell.setCell(data: viewModel.settingData[indexPath.row])
         return cell
     }
     
